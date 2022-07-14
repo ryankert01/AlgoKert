@@ -9,7 +9,7 @@ export default defineConfig({
     lang: 'en-US',
     title: 'AlgoKert',
     
-    head: {
+    head: [
         
         // ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
         ['meta', { property: 'og:type', content: 'website' }],
@@ -17,7 +17,7 @@ export default defineConfig({
         // ['meta', { property: 'og:image', content: ogImage }],
         ['meta', { property: 'og:url', content: ogUrl }],
         ['meta', { property: 'og:description', content: ogDescription }],
-    }
+    ],
     
     titleTemplate: 'An algorithm website driven by leetcode examples', // otherwise false
     description: 'An algorithm website, with leetcode, and with nice comments and answer',
