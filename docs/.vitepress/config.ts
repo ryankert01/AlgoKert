@@ -62,10 +62,19 @@ export default defineConfig({
             {
                 text: 'Dynamic Programming',
                 items: [
-                    { text: 'Introduction', link: '/dynamic-programming/dp-intro'},
-                    { text: '509. Fibonacci Numbers', link: '/dynamic-programming/509'},
-                    { text: '376. Wiggle Subsequence', link: '/dynamic-programming/376'},
-                    { text: '5. Longest Palindromic Substring', link: '/dynamic-programming/5'},
+                    { text: 'Introduction', link: '/dynamic-programming/dp-intro' },
+                    { text: 'Fibonacci Numbers', link: '/dynamic-programming/509' },
+                    { text: 'Wiggle Subsequence', link: '/dynamic-programming/376' },
+                    { text: 'Longest Palindromic Substring', link: '/dynamic-programming/5' },
+                ]
+            },
+
+            {
+                text: 'Tree',
+                items: [
+                    { text: 'Invert Binary Tree', link: '/Tree/226' },
+                    { text: 'Construct Binary Tree from Preorder and Inorder Traversal', link: '/Tree/105' },
+                    
                 ]
             }
         ]
