@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
 
-const ogImage = 'https://github.com/ryankert01/AlgoKert/tree/main/docs/img/icon.png'
+const ogImage = 'https://raw.githubusercontent.com/ryankert01/AlgoKert/main/docs/img/icon.png'
 const ogDescription = 'An algorithm website, with leetcode, and with nice comments and answer'
 const ogTitle = 'AlgoKert'
 const ogUrl = 'https://ryankert.cc/AlgoKert'
@@ -11,7 +11,7 @@ export default defineConfig({
     
     head: [
 
-        ['link', { rel: 'icon', type: 'image/svg+xml', href: 'https://github.com/ryankert01/AlgoKert/tree/main/docs/img/logo.svg' }],
+        ['link', { rel: 'icon', type: 'image/svg+xml', href: 'https://raw.githubusercontent.com/ryankert01/AlgoKert/744b53f88fc30c037f9cd303f7809737ca15739f/docs/img/icon.svg' }],
         ['meta', { property: 'og:type', content: 'website' }],
         ['meta', { property: 'og:title', content: ogTitle }],
         ['meta', { property: 'og:image', content: ogImage }],
