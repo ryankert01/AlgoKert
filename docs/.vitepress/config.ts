@@ -20,10 +20,15 @@ export default defineConfig({
     ],
     
     titleTemplate: 'An algorithm website driven by leetcode examples', // otherwise false
+
     description: 'An algorithm website, with leetcode, and with nice comments and answer',
+
     appearance: true, // dark mode enabled
+
     base: '/AlgoKert/',
+
     lastUpdated: true,
+
     // markdown
     // https://vitepress.vuejs.org/config/app-configs.html#markdown
     markdown: {
@@ -59,6 +64,7 @@ export default defineConfig({
                 { text: 'Contribute Guidelines', link: '/contribute' },
               ]
             },
+            
             {
                 text: 'Dynamic Programming',
                 items: [
