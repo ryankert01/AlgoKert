@@ -18,7 +18,7 @@ export default defineConfig({
     themeConfig: {
         nav: [
             { text: 'My Blog', link: 'https://blog.ryankert.cc'},
-            { text: 'Contribute Guild', link: '/contribute'}
+            { text: 'Contribute Guide', link: '/contribute'}
         ],
         socialLinks: [
             { icon: 'github', link: 'https://github.com/ryankert01' },
@@ -32,7 +32,7 @@ export default defineConfig({
               text: 'Guide',
               items: [
                 { text: 'Getting Started', link: '/getting-started' },
-                { text: 'Contribute Guildlines', link: '/contribute' },
+                { text: 'Contribute Guidelines', link: '/contribute' },
               ]
             },
             {
