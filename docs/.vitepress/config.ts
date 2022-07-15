@@ -64,6 +64,13 @@ export default defineConfig({
                 { text: 'Contribute Guidelines', link: '/contribute' },
               ]
             },
+
+            {
+                text: 'Depth-First Search (DFS)',
+                items: [
+                    { text: 'Max Area of Island', link: '/dfs/695'}
+                ]
+            },
             
             {
                 text: 'Dynamic Programming',
