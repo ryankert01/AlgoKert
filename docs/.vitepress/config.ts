@@ -88,6 +88,7 @@ export default defineConfig({
                 items: [
                     { text: 'Invert Binary Tree', link: '/Tree/226' },
                     { text: 'Construct Binary Tree from Preorder and Inorder Traversal', link: '/Tree/105' },
+                    { text: 'Binary Search Tree to Greater Sum Tree', link: '/Tree/1038' },
                     
                 ]
             }
