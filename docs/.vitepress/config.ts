@@ -79,6 +79,7 @@ export default defineConfig({
                     { text: 'Fibonacci Numbers', link: '/dynamic-programming/509' },
                     { text: 'Wiggle Subsequence', link: '/dynamic-programming/376' },
                     { text: 'Longest Palindromic Substring', link: '/dynamic-programming/5' },
+                    { text: 'Out of Boundary Paths', link: '/dynamic-programming/576' },
                 ]
             },
 
