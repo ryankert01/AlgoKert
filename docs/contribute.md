@@ -10,18 +10,18 @@ send us a `issue` or `PR`, we will look into it.
 
 If you want to submit a new post, we have a format that is nice to follow.
 
-```
+```md
 # title
 
-[title](/* oj link */)
+[title](/_ oj link _/)
 
 ## Intuition
 
-/* your thinking process */
+/_ your thinking process _/
 
 ## Code
 
-/* your code ac in oj */
+/_ your code ac in oj _/
 
 ## Complexity Analysis
 
