@@ -66,6 +66,14 @@ export default defineConfig({
             },
 
             {
+                text: 'Hash Table',
+                items: [
+                    { text: 'Subarray Sum Equals K', link: '/hash-table/560' },
+                    { text: 'Number of Submatrices That Sum to Target', link: '/hash-table/1074' },
+                ]
+            },
+
+            {
                 text: 'Depth-First Search (DFS)',
                 items: [
                     { text: 'Max Area of Island', link: '/dfs/695'}

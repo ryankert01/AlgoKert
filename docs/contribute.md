@@ -25,8 +25,8 @@ If you want to submit a new post, we have a format that is nice to follow.
 
 ## Complexity Analysis
 
-Time:
-Space:
+**Time: ** `O()`
+**Space: ** `O()`
 ```
 
 If you finish, send us a PR!
