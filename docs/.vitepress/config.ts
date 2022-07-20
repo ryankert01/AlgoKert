@@ -66,6 +66,13 @@ export default defineConfig({
             },
 
             {
+                text: 'String Manipulations',
+                items: [
+                    { text: 'Number of Matching Subsequences', link: '/string/792' },
+                ]
+            },
+
+            {
                 text: 'Hash Table',
                 items: [
                     { text: 'Subarray Sum Equals K', link: '/hash-table/560' },

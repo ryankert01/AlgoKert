@@ -11,9 +11,15 @@ send us a `issue` or `PR`, we will look into it.
 If you want to submit a new post, we have a format that is nice to follow.
 
 ```md
-# title
+---
+title: /* title */
+editLink: true
+description: leetcode 792. /* title */
+---
 
-[title](/_ oj link _/)
+# {{ $frontmatter.title }}
+
+[{{ $frontmatter.description }}](/_ oj link _/)
 
 ## Intuition
 
@@ -25,8 +31,8 @@ If you want to submit a new post, we have a format that is nice to follow.
 
 ## Complexity Analysis
 
-**Time: ** `O()`
-**Space: ** `O()`
+**Time:** `O()`
+**Space:** `O()`
 ```
 
 If you finish, send us a PR!
