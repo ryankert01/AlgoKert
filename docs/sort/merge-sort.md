@@ -144,3 +144,67 @@ void mergeSort(iterator a, iterator b) {
 
 **Time:** `O(n*log(n))`
 **Space:** `O(n*log(n))`
+
+## Put your skill into Practice
+
+leetcode `medium`:
+
+https://leetcode.com/problems/sort-list/
+
+```cpp
+ListNode* sortList(ListNode* head) {
+    if(!head || !head->next)
+        return head;
+    ListNode* mid = findMid(head);
+    ListNode* fir = sortList(head);
+    ListNode* sec = sortList(mid);
+    return merge(fir, sec);
+}
+
+ListNode* merge(ListNode* fir, ListNode* sec){
+    ListNode Header;
+    ListNode* ptr = &Header;
+    while(fir && sec)
+    {
+        if(fir->val < sec->val)
+        {
+            ptr->next = fir;
+            ptr = ptr->next;
+            fir = fir->next;
+        }
+        else
+        {
+            ptr->next = sec;
+            ptr = ptr->next;
+            sec = sec->next;
+        }
+    }
+    if(fir)
+        ptr->next = fir;
+    else
+        ptr->next = sec;
+
+    return Header.next;
+}
+
+ListNode* findMid(ListNode* head){
+    ListNode* midPrev = nullptr;
+
+    while(head && head->next)
+    {
+        midPrev = (midPrev == nullptr) ? head : midPrev->next;
+        head = head->next->next;
+    }
+    ListNode* mid = midPrev->next;
+    midPrev->next = nullptr;
+
+    return mid;
+}
+```
+
+leetcode `hard`:
+
+https://leetcode.com/problems/count-of-smaller-numbers-after-saelf/
+https://leetcode.com/problems/count-of-range-sum/
+https://leetcode.com/problems/reverse-pairs/
+https://leetcode.com/problems/merge-k-sorted-lists/
