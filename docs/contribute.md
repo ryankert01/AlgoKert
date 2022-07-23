@@ -1,4 +1,4 @@
-# Contribute Guildlines
+# Contribute Guidelines
 
 ## Modify Request
 

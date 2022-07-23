@@ -66,6 +66,13 @@ export default defineConfig({
             },
 
             {
+                text: 'Sort',
+                items: [
+                    { text: 'Merge Sort', link: '/sort/merge-sort'},
+                ]
+            },
+
+            {
                 text: 'String Manipulations',
                 items: [
                     { text: 'Number of Matching Subsequences', link: '/string/792' },
