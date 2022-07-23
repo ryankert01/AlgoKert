@@ -106,6 +106,13 @@ export default defineConfig({
             },
 
             {
+                text: 'Stack',
+                items: [
+                    { text: 'Shortest Impossible Sequence of Rolls', link: '/stack/2350' },
+                ]
+            },
+
+            {
                 text: 'Tree',
                 items: [
                     { text: 'Invert Binary Tree', link: '/Tree/226' },
