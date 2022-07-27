@@ -120,6 +120,14 @@ export default defineConfig({
                     { text: 'Binary Search Tree to Greater Sum Tree', link: '/Tree/1038' },
                     
                 ]
+            },
+            
+            {
+                text: 'Bit Manipulation',
+                items: [
+                    { text: 'Introduction', link: 'bits/intro' },
+                    { text: 'Sum of Two Integers', link: 'bits/371' }
+                ]
             }
         ]
     }
