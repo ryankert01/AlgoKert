@@ -102,6 +102,7 @@ export default defineConfig({
                     { text: 'Wiggle Subsequence', link: '/dynamic-programming/376' },
                     { text: 'Longest Palindromic Substring', link: '/dynamic-programming/5' },
                     { text: 'Out of Boundary Paths', link: '/dynamic-programming/576' },
+                    { text: 'Decode Ways', link: '/dynamic-programming/91' },
                 ]
             },
 
