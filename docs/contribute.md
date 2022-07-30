@@ -12,14 +12,15 @@ If you want to submit a new post, we have a format that is nice to follow.
 
 ```md
 ---
-title: /* title */
+title: # leetcode problem title
 editLink: true
-description: leetcode 792. /* title */
+description: leetcode # leetcode problem number and title
+problem_url: # leetcode problem url
 ---
 
 # {{ $frontmatter.title }}
 
-[{{ $frontmatter.description }}](/_ oj link _/)
+<a href="{{ $frontmatter.problem_url }}" target="_blank" rel="noopener noreferrer">{{ $frontmatter.description }}</a>
 
 ## Intuition
 

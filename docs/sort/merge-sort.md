@@ -204,7 +204,7 @@ ListNode* findMid(ListNode* head){
 
 leetcode `hard`:
 
-https://leetcode.com/problems/count-of-smaller-numbers-after-saelf/
+https://leetcode.com/problems/count-of-smaller-numbers-after-self/
 https://leetcode.com/problems/count-of-range-sum/
 https://leetcode.com/problems/reverse-pairs/
 https://leetcode.com/problems/merge-k-sorted-lists/

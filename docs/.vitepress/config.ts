@@ -103,6 +103,7 @@ export default defineConfig({
                     { text: 'Longest Palindromic Substring', link: '/dynamic-programming/5' },
                     { text: 'Out of Boundary Paths', link: '/dynamic-programming/576' },
                     { text: 'Decode Ways', link: '/dynamic-programming/91' },
+                    { text: 'Longest Increasing Subsequence', link: '/dynamic-programming/300' },
                 ]
             },
 
