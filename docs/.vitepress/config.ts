@@ -130,6 +130,13 @@ export default defineConfig({
                     { text: 'Introduction', link: 'bits/intro' },
                     { text: 'Sum of Two Integers', link: 'bits/371' }
                 ]
+            },
+
+            {
+                text: 'Advanced Algorithms',
+                items: [
+                    { text: 'Binary Indexed Tree', link: 'advanced-algo/bit' }
+                ]
             }
         ]
     }
