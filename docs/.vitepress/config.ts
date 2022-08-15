@@ -76,6 +76,7 @@ export default defineConfig({
                 text: 'String Manipulations',
                 items: [
                     { text: 'Number of Matching Subsequences', link: '/string/792' },
+                    { text: 'Roman to Integer', link: '/string/13' },
                 ]
             },
 
