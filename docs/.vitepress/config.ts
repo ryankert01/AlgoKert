@@ -77,6 +77,7 @@ export default defineConfig({
                 items: [
                     { text: 'Roman to Integer', link: '/string/13' },
                     { text: 'Number of Matching Subsequences', link: '/string/792' },
+                    { text: 'KMT Problem', link : '/string/kmt' },
                 ]
             },
 
