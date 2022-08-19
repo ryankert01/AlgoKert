@@ -59,6 +59,7 @@ export default defineConfig({
         sidebar: [
             {
               text: 'Guide',
+              collapsible: true,
               items: [
                 { text: 'Getting Started', link: '/getting-started' },
                 { text: 'Contribute Guidelines', link: '/contribute' },
@@ -68,6 +69,7 @@ export default defineConfig({
 
             {
                 text: 'Sort',
+                collapsible: true,
                 items: [
                     { text: 'Merge Sort', link: '/sort/merge-sort'},
                 ]
@@ -75,6 +77,7 @@ export default defineConfig({
 
             {
                 text: 'String Manipulations',
+                collapsible: true,
                 items: [
                     { text: 'Roman to Integer', link: '/string/13' },
                     { text: 'Number of Matching Subsequences', link: '/string/792' },
@@ -84,6 +87,7 @@ export default defineConfig({
 
             {
                 text: 'Hash Table',
+                collapsible: true,
                 items: [
                     { text: 'Subarray Sum Equals K', link: '/hash-table/560' },
                     { text: 'Split Array into Consecutive Subsequences', link: '/hash-table/659' },
@@ -93,6 +97,7 @@ export default defineConfig({
 
             {
                 text: 'Depth-First Search (DFS)',
+                collapsible: true,
                 items: [
                     { text: 'Max Area of Island', link: '/dfs/695'}
                 ]
@@ -100,6 +105,7 @@ export default defineConfig({
             
             {
                 text: 'Dynamic Programming',
+                collapsible: true,
                 items: [
                     { text: 'Introduction', link: '/dynamic-programming/dp-intro' },
                     { text: 'Fibonacci Numbers', link: '/dynamic-programming/509' },
@@ -113,6 +119,7 @@ export default defineConfig({
 
             {
                 text: 'Stack',
+                collapsible: true,
                 items: [
                     { text: 'Shortest Impossible Sequence of Rolls', link: '/stack/2350' },
                 ]
@@ -120,6 +127,7 @@ export default defineConfig({
 
             {
                 text: 'Tree',
+                collapsible: true,
                 items: [
                     { text: 'Invert Binary Tree', link: '/Tree/226' },
                     { text: 'Construct Binary Tree from Preorder and Inorder Traversal', link: '/Tree/105' },
@@ -130,6 +138,7 @@ export default defineConfig({
             
             {
                 text: 'Bit Manipulation',
+                collapsible: true,
                 items: [
                     { text: 'Introduction', link: 'bits/intro' },
                     { text: 'Sum of Two Integers', link: 'bits/371' }
@@ -138,6 +147,7 @@ export default defineConfig({
 
             {
                 text: 'Advanced Algorithms',
+                collapsible: true,
                 items: [
                     { text: 'Binary Indexed Tree', link: 'advanced-algo/bit' }
                 ]
