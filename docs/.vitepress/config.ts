@@ -62,6 +62,7 @@ export default defineConfig({
               items: [
                 { text: 'Getting Started', link: '/getting-started' },
                 { text: 'Contribute Guidelines', link: '/contribute' },
+                { text: 'Table of Content', link: '/table-of-content' },
               ]
             },
 
