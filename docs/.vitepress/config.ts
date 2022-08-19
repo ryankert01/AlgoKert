@@ -85,6 +85,7 @@ export default defineConfig({
                 text: 'Hash Table',
                 items: [
                     { text: 'Subarray Sum Equals K', link: '/hash-table/560' },
+                    { text: 'Split Array into Consecutive Subsequences', link: '/hash-table/659' },
                     { text: 'Number of Submatrices That Sum to Target', link: '/hash-table/1074' },
                 ]
             },
