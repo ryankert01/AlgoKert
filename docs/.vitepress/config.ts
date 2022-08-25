@@ -99,7 +99,8 @@ export default defineConfig({
                 text: 'Depth-First Search (DFS)',
                 collapsible: true,
                 items: [
-                    { text: 'Max Area of Island', link: '/dfs/695'}
+                    { text: 'Max Area of Island', link: '/dfs/695' },
+                    { text: 'Amount of Time for Binary Tree to Be Infected', link: '/dfs/2385' },
                 ]
             },
             
