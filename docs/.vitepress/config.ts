@@ -149,7 +149,8 @@ export default defineConfig({
                 text: 'Advanced Algorithms',
                 collapsible: true,
                 items: [
-                    { text: 'Binary Indexed Tree', link: 'advanced-algo/bit' }
+                    { text: 'Binary Indexed Tree', link: 'advanced-algo/bit' },
+                    { text: 'Union Find', link: '/advanced-algo/union-find' }
                 ]
             }
         ]
