@@ -72,6 +72,7 @@ export default defineConfig({
                 collapsible: true,
                 items: [
                     { text: 'Merge Sort', link: '/sort/merge-sort'},
+                    { text: 'Topological Sort', link: '/sort/topological-sort' }
                 ]
             },
 
