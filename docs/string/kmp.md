@@ -150,7 +150,6 @@ int repeatedStringMatch(string a, string b) {
     return -1;
 }
 
-```cpp
 int kmpfind(string& p, string& s) {
     
     for(int i = 0, j = 0; i < s.size();) {
