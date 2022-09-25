@@ -13,6 +13,10 @@ problem_url: https://leetcode.com/problems/maximum-segment-sum-after-removals/ #
 
 Union find, aka. disjoint set, is a data structure to group a set of indexes together. To know if it's in a same group, we only need to check if they use the same representative node.
 
+Namely, it is a vector that stores values that can either be a pointer to other node or its a group representative node storing value.
+
+To find a representative node, you just need to follows the pointer until it reaches a representative node.
+
 ### Union find Operations:
 
 1. find: find where its value is stored (`log(n)`)
