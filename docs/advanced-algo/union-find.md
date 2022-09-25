@@ -7,16 +7,65 @@ problem_url: https://leetcode.com/problems/maximum-segment-sum-after-removals/ #
 
 # {{ $frontmatter.title }}
 
-<a href="{{ $frontmatter.problem_url }}" target="_blank" rel="noopener noreferrer">{{ $frontmatter.description }}</a>
+
 
 ## Intuition
+
+Union find, aka. disjoint set, is a data structure to group a set of indexes together. To know if it's in a same group, we only need to check if they use the same representative node.
 
 ### Union find Operations:
 
 1. find: find where its value is stored (`log(n)`)
 2. merge: merge neighboring groups (`log(n)`)
 
-### Explanations:
+::: tip
+### Merge `O(n)` tips, introducing `rank`
+We use rank to store the height of a disjoint set tree.
+Join the less height tree to higher tree, to lower the result tree, to let the search speed always at `O(N)`.
+:::
+
+## Example Union find code
+
+```cpp
+class UnionFind {
+    private:
+        vector<int> id, rank;
+        int cnt;
+    public:
+        UnionFind(int cnt) : cnt(cnt) {
+            id = vector<int>(cnt);
+            rank = vector<int>(cnt, 0);
+            for (int i = 0; i < cnt; ++i) id[i] = i;
+        }
+        int find(int p) {
+            if (id[p] == p) return p;
+            return id[p] = find(id[p]);
+        }
+        int getCount() { 
+            return cnt; 
+        }
+        bool connected(int p, int q) { 
+            return find(p) == find(q); 
+        }
+        void connect(int p, int q) {
+            int i = find(p), j = find(q);
+            if (i == j) return;
+            if (rank[i] < rank[j]) {
+                id[i] = j;  
+            } else {
+                id[j] = i;
+                if (rank[i] == rank[j]) rank[j]++;
+            }
+            --cnt;
+        }
+};
+```
+
+## Example Problem 1 :
+
+<a href="{{ $frontmatter.problem_url }}" target="_blank" rel="noopener noreferrer">{{ $frontmatter.description }}</a>
+
+### Explanations
 
 In this problem, because all `nums` will eventually be removed, we reverse the operations that this problem provide, so that we can use Union-Find.
 
@@ -25,7 +74,7 @@ So, we can start from no segments, add elements in the reverse (of the removal) 
 1. initialize `ds` array with `INT_MAX`, we will store `nums` value in `-nums` (nagative), and store index value `>= 0` (positive).
 2. insert per `i in removeQueries`, if there's already values besides it, join/merge it.
 
-## Code
+### Code
 
 ```cpp
 #define ll long long
@@ -53,71 +102,67 @@ vector<long long> maximumSegmentSum(vector<int>& nums, vector<int>& rq) {
 }
 ```
 
-## Complexity Analysis
-
-**Time:** `O(n*log(n))`
-
-**Space:** `O(n)`
-
-## Another Solution
-
-### Prefix Sum + Map + Priority Queue
-
-**Intuition:**
-
-Firstly, Create a vector dp contains `dp[i] = nums[0] + ... + nums[i-1]`, so we can use `dp[j+1] - dp[i]` to find range sum in constant time.
-
-We use map to mark every range that haven't been removed for every element, and update it in every `removeQueries`.
-
-Hence, we use `priority_queue` to find the maximum, since we have already updated range in `map`, if we encounters those with different range with current range, discard that.
-
-### Code
-
-```cpp
-#define ll long long
-vector<long long> maximumSegmentSum(vector<int>& nums, vector<int>& rmQueries) {
-	int n = nums.size();
-	vector<ll> dp(n+1);
-	ll acc = 0;
-	for(int i = 0; i < n; i++)
-		dp[i+1] = acc += nums[i];
-
-	vector<ll> res;
-	map<int,int> ran;
-	priority_queue<array<ll,3>> pq;
-	pq.push({dp.back(), 0, n-1});
-	ran[0] = n-1;
-	for(int i = 0; i < n; i++) {
-		auto it = --ran.upper_bound(rmQueries[i]);
-
-		if(rmQueries[i]+1 < n && ran.find(rmQueries[i]+1) == ran.end()) {
-			ran[rmQueries[i]+1] = it->second;
-			pq.push({dp[it->second+1] - dp[rmQueries[i]+1], rmQueries[i]+1, it->second});
-		}
-
-		if(rmQueries[i] == it->first)
-			ran.erase(rmQueries[i]);
-		else {
-			it->second = rmQueries[i]-1;
-			pq.push({dp[it->second+1] - dp[it->first], it->first, it->second});
-		}
-
-		while(!pq.empty() && (ran.find(pq.top()[1]) == ran.end() || pq.top()[2] != ran[pq.top()[1]]))
-			pq.pop();
-
-		if(pq.empty())
-			res.push_back(0);
-		else
-			res.push_back(pq.top()[0]);
-
-	}
-
-	return res;
-}
-```
-
 ### Complexity Analysis
 
 **Time:** `O(n*log(n))`
 
 **Space:** `O(n)`
+
+
+## Example Problem 2:
+
+[2421. Number of Good Paths](https://leetcode.com/problems/number-of-good-paths/)
+
+```cpp
+class Solution {
+public:
+    vector<int> d, rank; // disjoint set
+    vector<vector<int>> adj; // adjacency list
+    map<int,vector<int>> index;
+    int numberOfGoodPaths(vector<int>& vals, vector<vector<int>>& edges) {
+        // construct adjacency list & duplication map
+        int m = vals.size();
+        d.resize(m,INT_MIN), rank.resize(m,0);
+        adj.resize(m);
+        int res = m;
+        for (auto& it : edges) {
+            if(vals[it[0]] > vals[it[1]]) {
+                adj[it[0]].push_back( it[1] );
+            } else {
+                adj[it[1]].push_back( it[0] );
+            }
+        }
+        
+        for(int i = 0; i < m; i++) 
+            index[vals[i]].push_back(i);
+        
+        for (auto& it : index) {
+            for(int& j : it.second) {
+                for(auto& i : adj[j]) {
+                    merge(j, i);
+                }                
+            }
+            unordered_map<int,int> st;
+            for(int& i : it.second) {
+                int idx = find(i);
+                res += st[idx]++;
+            }
+        }
+        return res;
+    }
+    
+    int find(int i) {
+        return d[i] < 0 ? i : find(d[i]);
+    }
+    
+    void merge(int i, int j) {
+        int p1 = find(i), p2 = find(j);
+        if(rank[p1] < rank[p2]) {
+            d[p1] = p2;
+        } else {
+            d[p2] = p1;
+            if(rank[p1] == rank[p2]) rank[p1]++;
+        }
+    }
+};
+```
