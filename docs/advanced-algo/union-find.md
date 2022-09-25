@@ -23,7 +23,7 @@ To find a representative node, you just need to follows the pointer until it rea
 2. merge: merge neighboring groups (`log(n)`)
 
 ::: tip
-### Merge `O(n)` tips, introducing `rank`
+### Merge `O(log(n))` tips, introducing `rank`
 We use rank to store the height of a disjoint set tree.
 Join the less height tree to higher tree, to lower the result tree, to let the search speed always at `O(N)`.
 :::
