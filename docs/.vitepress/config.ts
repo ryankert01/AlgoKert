@@ -136,7 +136,7 @@ export default defineConfig({
                     { text: 'Construct Binary Tree from Preorder and Inorder Traversal', link: '/Tree/105' },
                     { text: 'Binary Search Tree to Greater Sum Tree', link: '/Tree/1038' },
                     { text: 'Trie (Prefix Tree)', link: '/Tree/trie' },
-                    
+                    { text: 'Minimum Spanning Tree', link: '/Tree/minimum-spanning-tree' },
                 ]
             },
             
