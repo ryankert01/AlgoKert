@@ -137,6 +137,7 @@ export default defineConfig({
                     { text: 'Binary Search Tree to Greater Sum Tree', link: '/Tree/1038' },
                     { text: 'Trie (Prefix Tree)', link: '/Tree/trie' },
                     { text: 'Minimum Spanning Tree', link: '/Tree/minimum-spanning-tree' },
+                    { text: 'Binary Tree Interative Traversal', link: 'Tree/bt-iterative-traversal'},
                 ]
             },
             
