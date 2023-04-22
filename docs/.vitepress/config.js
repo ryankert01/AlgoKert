@@ -145,6 +145,7 @@ export default defineConfig({
             link: "/dynamic-programming/300",
           },
           { text: "Maximal Rectangle", link: "/dynamic-programming/85" },
+          { text: "LCS", link: "/dynamic-programming/1312" },
         ],
       },
 
