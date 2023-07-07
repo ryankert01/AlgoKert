@@ -44,7 +44,6 @@ export default defineConfig({
     config: (md) => {
       md.use(require("markdown-it-mathjax3"));
     },
-    theme: "material-palenight",
     lineNumbers: true,
   },
 
