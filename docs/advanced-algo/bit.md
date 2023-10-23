@@ -35,6 +35,8 @@ So, basically, if let `node`'s index is `i`, then it stored sum of values from `
 
 ### How to find which node is i's parent node?
 
+Do it in a 1-indexed way.
+
 get i's binary expression and filp its right most 1 to 0.
 
 codewise:
@@ -78,3 +80,33 @@ class BIT {
     }
 };
 ```
+
+### Example: CodeForces [G - Anya and the Mysterious String](https://codeforces.com/contest/1881/problem/G)
+
+Fenwick tree with modulo operation.
+
+```cpp
+int fen[MAXN];
+
+void fenadd(int i, int x) {
+	x = (x % L + L) % L;
+	for (++i; i <= n; i += i & -i)
+		fen[i] = (fen[i] + x) % L;
+}
+
+int fenget(int i) {
+	int ans = 0;
+	for (++i; i > 0; i -= i & -i)
+		ans = (ans + fen[i]) % L;
+	return ans;
+}
+```
+
+[my submission](https://codeforces.com/contest/1881/submission/229459374)
+
+
+### Valuable Reference
+
+[Fenwick Tree | 二叉索引树 详解 | 秒懂](https://zhuanlan.zhihu.com/p/94432288)
+
+[Fenwick Tree](https://cp-algorithms.com/data_structures/fenwick.html)
