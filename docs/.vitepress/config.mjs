@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import mathjax3 from "markdown-it-mathjax3";
 
 const ogImage =
   "https://raw.githubusercontent.com/ryankert01/AlgoKert/main/docs/img/icon.png";
@@ -42,7 +43,7 @@ export default defineConfig({
   // https://vitepress.vuejs.org/config/app-configs.html#markdown
   markdown: {
     config: (md) => {
-      md.use(require("markdown-it-mathjax3"));
+      md.use(mathjax3);
     },
     lineNumbers: true,
   },
