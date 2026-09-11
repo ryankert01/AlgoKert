@@ -16,7 +16,7 @@
     "docs:serve": "vitepress serve docs"
   },
   "dependencies": {
-    "markdown-it": "^14.0.0",
+    "markdown-it": "^15.0.0",
     "markdown-it-mathjax3": "^5.0.0"
   }
 }
